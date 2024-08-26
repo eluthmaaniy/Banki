@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking App Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap' rel='stylesheet'/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <style>
+        body {
+            padding-bottom: 60px; /* Adjust based on your footer height */
+            font-family: Inter;
+            font-size: 11px;
+        }
+        .footer-icon {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-red-600 text-white p-2 flex justify-between items-center">
+        <div class="flex items-center">
+            <i class="fas fa-bell mr-2"></i>
+            <span>Alerts</span>
+        </div>
+        <button class="bg-white text-red-600 px-3 py-2 rounded-full text-sm">Help</button>
+        <div class="flex items-center">
+            <i class="fas fa-lock mr-2"></i>
+            <span>Sign Out</span>
+        </div>
+    </header>
+
+
+
+ <main class="container mx-auto p-4">
+    <div class="bg-white rounded-lg overflow-hidden shadow-md mb-4">
+        <div class="flex">
+           <a href="transactions.html"><button class="flex-1 py-2 px-4 bg-white text-blue-600 font-semibold border border-blue-600">Accounts</a></button>
+            <button class="flex-1 py-2 px-4 bg-blue-600 text-white font-semibold">My Dashboard</button>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4">
+        <!-- BofA Core Checking -->
+        <div class="bg-white p-4 flex flex-col items-center">
+            <div class="flex items-center mb-2">
+                <img src="https://res.cloudinary.com/dib5bkbsy/image/upload/v1724546520/1000513958-removebg-preview_blil0j.png" alt="BofA Core Checking" class="w-10 h-10 rounded-full">
+            </div>
+            <span class="text-sm text-gray-500 text-center">BofA Core Checking...7022</span>
+            <div class="text-xl font-bold text-gray-500 text-center">$301,756.86</div>
+        </div>
+
+        <!-- My FICO Score -->
+        <div class="bg-white p-4 flex flex-col items-center">
+            <div class="flex items-center mb-2">
+                <img src="https://res.cloudinary.com/dib5bkbsy/image/upload/v1724546691/1000513957-removebg-preview_h3cair.png" alt="My FICO Score" class="w-10 h-10 rounded-full">
+            </div>
+            <span class="text-sm text-gray-500 text-center">My FICO® Score</span>
+            <div class="text-blue-600 text-center">Score Unavailable</div>
+        </div>
+
+        <!-- BankAmericard Cash -->
+        <div class="bg-white p-4 flex flex-col items-center">
+            <div class="flex items-center mb-2">
+                <img src="https://res.cloudinary.com/dib5bkbsy/image/upload/v1724546691/1000513959-removebg-preview_ekiaez.png" alt="BankAmericard Cash" class="w-10 h-10 rounded-full">
+            </div>
+            <span class="text-sm text-gray-500 text-center">BankAmericard Cash...6268</span>
+            <div class="text-lg font-bold text-gray-500 text-center">$26.19</div>
+            <div class="text-xs text-gray-600 text-center">Available Rewards</div>
+        </div>
+
+        <!-- Spending & Budgeting -->
+        <div class="bg-white p-4 flex flex-col items-center">
+            <div class="flex items-center mb-2">
+                <img src="https://res.cloudinary.com/dib5bkbsy/image/upload/v1724546692/1000513960-removebg-preview_xh0y1f.png" alt="Spending & Budgeting" class="w-10 h-10 rounded-full">
+            </div>
+            <span class="text-sm text-gray-500 text-center">Spending & Budgeting</span>
+            <div class="text-blue-600 text-center">Set Your Budget</div>
+        </div>
+
+        <!-- BankAmeriDeals -->
+        <div class="bg-white p-4 flex flex-col items-center">
+            <div class="flex items-center mb-2">
+                <img src="https://res.cloudinary.com/dib5bkbsy/image/upload/v1724546692/1000513956-removebg-preview_nuj8k4.png" alt="BankAmeriDeals" class="w-10 h-10 rounded-full">
+            </div>
+            <span class="text-sm text-gray-500 text-center">BankAmeriDeals®</span>
+            <div class="text-lg font-bold text-gray-500 text-center">$100 <span class="text-xs font-normal">Cash Back</span></div>
+            <div class="text-xs text-gray-600 text-center">49 Days Left</div>
+        </div>
+
+        <!-- Alerts -->
+        <div class="bg-white p-4 flex flex-col items-center">
+            <div class="flex items-center mb-2">
+                <img src="https://res.cloudinary.com/dib5bkbsy/image/upload/v1724546692/1000513961-removebg-preview_t5pnlr.png" alt="Alerts" class="w-10 h-10 rounded-full">
+            </div>
+            <span class="text-sm text-gray-500 text-center">Alerts</span>
+            <div class="text-blue-600 text-center">Enroll now</div>
+        </div>
+    </div>
+
+    <button class="fixed bottom-13 left-4 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl shadow-lg">
+        +
+    </button>
+</main>
+
+    
+    <footer class="fixed bottom-0 left-0 right-0 bg-white shadow-lg ">
+        <nav class="flex justify-between items-center px-4 py-2">
+            <button class=" flex flex-col items-center text-white mr-3">
+                <i class="fas fa-dollar-sign footer-icon bg-blue-600 rounded-full w-4 h-4"></i>
+                <span class="text-xs mt-1 text-gray-500">Accounts</span>
+            </button>
+            <button class="flex flex-col items-center text-gray-600 mr-2">
+                <i class="fa fa-exchange-alt footer-icon"></i>
+                <span class="text-xs mt-1">Transfer | Send</span>
+            </button>
+            <button class="flex flex-col items-center text-gray-600">
+                <i class="fas fa-money-bill-wave footer-icon"></i>
+                <span class="text-xs mt-1">Bill Pay</span>
+            </button>
+            <button class="flex flex-col items-center text-gray-600 ml-1">
+                <i class="fas fa-money-check footer-icon"></i>
+                <span class="text-xs mt-1">Deposit Checks</span>
+            </button>
+            <button class="flex flex-col items-center text-gray-600 ml-3">
+                <i class="fas fa-ellipsis-h footer-icon"></i>
+                <span class="text-xs mt-1">Menu</span>
+            </button>
+        </nav>
+    </footer>
+</body>
+</html>

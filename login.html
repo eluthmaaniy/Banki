@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap' rel='stylesheet'/>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <title>Login</title>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-blue-600">
+    <div class="bg-red-600 p-8 rounded-lg shadow-lg w-96 relative">
+        <!-- Close Icon -->
+        <i class="ri-close-line text-white absolute top-2 right-2 cursor-pointer"></i>
+        
+        <h2 class="text-white text-xl mb-6 text-center">Enter your credentials</h2>
+        
+       
+        <form id="loginForm">
+            <div class="mb-4 relative">
+                <label for="onlineID" class="sr-only">Online ID</label>
+                <input type="text" id="onlineID" class="w-full p-2 pr-8 rounded border border-gray-300" placeholder="Online ID" required>
+                <i class="ri-lock-fill absolute right-2 top-2.5 text-gray-300"></i>
+            </div>
+            <div class="mb-4 relative">
+                <label for="password" class="sr-only">Password</label>
+                <input type="password" id="password" class="w-full p-2 pr-8 rounded border border-gray-300" placeholder="Password" required>
+                <i class="ri-lock-fill absolute right-2 top-2.5 text-gray-300"></i>
+            </div>
+            <button type="submit" class="bg-red-700 text-white w-full p-2 rounded hover:bg-red-800">Submit</button>
+        </form>
+        <a href="#" id="resetPassword" class="text-white text-sm block text-center mt-4">Reset password</a>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const onlineID = document.getElementById('onlineID').value;
+            const password = document.getElementById('password').value;
+
+            // Demo login credentials
+            const demoID = "205.211.157.84";
+            const demoPassword = "$recov4755";
+
+            if (onlineID === demoID && password === demoPassword) {
+                // Redirect to dashboard.html
+                window.location.href = 'dashboard.html';
+            } else {
+                alert('Invalid Online ID or Password. Please try again.');
+            }
+        });
+
+        // Close button functionality
+        document.querySelector('.ri-close-line').addEventListener('click', function() {
+            window.location.href = '/';  // Change this to the URL you want the close button to direct to
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: 'inter', sans-serif;
+        }
+    </style>
+</body>
+</html>
